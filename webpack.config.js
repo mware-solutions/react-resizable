@@ -4,12 +4,14 @@ const path = require('path');
 module.exports = {
   context: __dirname,
   entry: {
-    test: "./test/test.js",
+    index: './index.js'
   },
   output: {
     path: path.join(__dirname, "dist"),
     filename: "bundle.js",
     sourceMapFilename: "[file].map",
+    library: 'react-resizable',
+    libraryTarget: 'umd'
   },
   externals: {
     'react': {
